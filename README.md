@@ -1,2 +1,1 @@
-# collaborative-book
-The World’s First Collaborative Book
+# The World’s First Collaborative Book
