@@ -2,12 +2,22 @@ document.addEventListener('DOMContentLoaded', function() {
 
     let rainbowRule = Bindery.createRule({
         eachPage: function(page, book) {
-          if (page.number >= 11 && page.number <= 141) {
+          if (page.number >= 21 && page.number <= 146) {
             let pct = page.number / book.pageCount;
             page.background.style.backgroundColor = "hsl(" + (pct * 360) + ", 60%, 80%)";
           }
         }
       });
+    
+    let black = Bindery.createRule({
+        eachPage: function(page, book) {
+          if (page.number >= 16 && page.number <= 17) {
+            let pct = page.number / book.pageCount;
+            page.background.style.backgroundColor = "#0a0b0c";
+          }
+        }
+      });
+    
   
     Bindery.makeBook({
       content: {
@@ -26,10 +36,12 @@ document.addEventListener('DOMContentLoaded', function() {
       },
       rules: [
         rainbowRule,
+        black,
         Bindery.PageBreak({ selector: 'h2', position: 'avoid' }),
         Bindery.PageBreak({ selector: '.page-break', position: 'after' }),
         Bindery.PageBreak({ selector: '.back-cover', position: 'before' }),
         Bindery.FullBleedSpread({ selector: '.spread', continue: 'same' }),
+        Bindery.FullBleedPage({ selector: '.fullpage', continue: 'next' }),
         Bindery.RunningHeader({
             render: (page) => {
               const nullPageSelectors = [
