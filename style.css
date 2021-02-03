@@ -1,15 +1,15 @@
 @font-face {
   font-family: 'Happy Times Regular';
-  src: url('fonts/happy-times-NG_regular_master.otf') format('otf'),
-       url('fonts/happy-times-NG_regular_master_web.woff') format('woff');
+  src: url('fonts/happy-times-at-the-ikob.otf') format('otf'),
+       url('fonts/happy-times-at-the-ikob.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
     font-family: 'Happy Times Italic';
-    src: url('fonts/happy-times-NG_italic_master.otf') format('otf'),
-         url('fonts/happy-times-NG_italic_master_web.woff') format('woff');
+    src: url('fonts/happy-times-at-the-ikob_italic.otf') format('otf'),
+         url('fonts/happy-times-at-the-ikob_italic.woff') format('woff');
     font-weight: normal;
     font-style: italic;
 }
@@ -30,15 +30,21 @@
   font-style: italic;
 }
 
-:root {
-  --bg-color: white;
-  --main-color: black;
-  /*--gray: #eaeaea;*/
+* {
+  font-weight: normal;
 }
 
-.text-centered {
-  text-align: center;
-  display: block;
+p {
+  font-family: 'Happy Times Regular';
+  font-size: 9.5pt;
+  line-height: 1.1;
+  margin-top: 8pt;
+  margin-bottom: 0;
+  text-indent: 18pt;
+  text-align: justify;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto;
 }
 
 .first-p {
@@ -46,57 +52,19 @@
   text-indent: 0;
 }
 
-.left {
-  text-align: left;
-}
-
 .last-p {
   font-style: italic;
   text-indent: 0;
 }
 
-.white {
-  font-family: 'Inter Regular';
-  color: white;
-  text-indent: 0;
-  text-align: justify;
-}
-
-.top {
-padding-top: 40pt;
-}
-
-figure {
-  margin: 0;
-  width: 100%;
-  height: 100%;
-  position: relative;
-}
-
-figure img {
-  width: 100%;
-  height: 100%;
-}
-
-* {
-  font-weight: normal;
-}
-
-p {
-  font-family: 'Happy Times Regular';
-  font-size: 9pt;
-  line-height: 1.2;
-  margin-top: 8pt;
-  margin-bottom: 0;
-  text-indent: 20pt;
-  text-align: justify;
-  -webkit-hyphens: auto;
-  -moz-hyphens: auto;
-  hyphens: auto;
+.left {
+  text-align: left;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  hyphens: none;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  line-height: 1.1;
   margin: 0;
   padding: 0;
 }
@@ -122,27 +90,15 @@ h1 {
 h2 {
   font-family: 'Happy Times Italic';
   font-style: italic;
-  font-size: 17pt;
+  font-size: 18pt;
   padding-top: 6pt;
   padding-bottom: 2pt;
+  line-height: .9;
 }
 
 h3 {
   font-family: 'Inter Regular';
   font-size: 9pt;
-}
-
-.full {
-  font-family: 'Happy Times Regular';
-  font-size: 27pt;
-  line-height: 1.1;
-  text-indent: 0;
-  padding-top: 20pt;
-  padding-bottom: 50pt;
-  text-align: left;
-  -webkit-hyphens: none;
-  -moz-hyphens: none;
-  hyphens: none;
 }
 
 li {
@@ -168,95 +124,60 @@ a {
   color: black;
 }
 
-/*code, pre {
-  font-family: 'GT America Mono Regular';
-  letter-spacing: -.035em;
-  font-size: 80%;
-  color: #868ed6;
-}
-
-pre {
-  background: transparent;
-  border: 1px solid var(--main-color);
-  padding: 12pt;
-}
-
-a {
-  text-decoration: none;
-  border: 1px solid var(--main-color);
-  border-radius: 10px;
-  color: var(--main-color);
-  padding: 0 4px 1px 4px;
-}
-
-a:hover {
-  text-decoration: none;
-  background: var(--main-color);
-  color: white;
-}
-
-a.button, .button, button {
-  border: 1px solid var(--main-color);
-  border-radius: 20px;
-  padding: 16pt 24pt;
-  margin: 16pt 0;
-  text-transform: uppercase;
-  text-decoration: none;
-  display: inline-block;
-  background-color: transparent;
-}
-
-a.button:hover, .button:hover, button:hover {
-  text-decoration: none;
-  background: var(--main-color);
-  color: var(--bg-color);
-}
-
-hr {
-  height: 1px;
-  border: 0;
-  outline: none;
-  background: var(--main-color);
-  margin: 24pt 0;
-}
-
-a sup, sup {
-  text-decoration: none !important;
-  text-decoration-style: none !important;
-  text-decoration-color: white;
-}
-
-
-img {
-  margin: 8pt 0;
-  margin-right: 12pt;
-  background: var(--main-color);
-  background-blend-mode: multiply;
-  mix-blend-mode: multiply;
-}
-
-img.spread {
-  width: 100%;
-}
-
-.caption {
-  font-size: 10pt;
-  clear: right;
-  padding: 0 8pt;
+.text-centered {
   text-align: center;
+  display: block;
 }
 
-.back-cover p {
-  font-size: 10pt;
+.white {
+  font-family: 'Inter Regular';
+  color: white;
+  text-indent: 0;
+  text-align: justify;
+  line-height: 1.2;
 }
 
-.overline {
-  text-decoration: line-through;
-} 
+figure {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
 
-*/
+figure img {
+  width: 100%;
+  height: 100%;
+}
+
+.hid {
+  display: none;
+}
+
+.full {
+  font-family: 'Happy Times Regular';
+  font-size: 30pt;
+  line-height: 1;
+  text-indent: 0;
+  padding-top: 15pt;
+  padding-bottom: 35pt;
+  text-align: left;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  hyphens: none;
+}
+
+sup {
+  padding-left: 1pt;
+  font-size: 6pt;
+}
 
 .📖-running-header {
   font-family: 'Inter Regular';
   font-size: 9pt;
+}
+
+.📖-footnote {
+  font-family: 'Inter Regular';
+  font-size: 8pt;
+  margin-bottom: 15pt;
 }
